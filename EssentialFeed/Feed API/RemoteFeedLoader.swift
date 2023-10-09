@@ -28,22 +28,13 @@ public final class RemoteFeedLoader {
     
     public func load(completion: @escaping(Result) -> Void) {
         client.get(from: url) { [weak self] result in
-            guard let strongSelf = self else { return }
+            guard self != nil else { return }
             switch result {
             case let .success(data, response):
-                completion(strongSelf.map(data, response: response))
+                completion(FeedItemsMapper.map(data, from: response))
             case .failure:
-                completion(.failure(.connectivity))
+                completion(.failure(RemoteFeedLoader.Error.connectivity))
             }
-        }
-    }
-    
-    private func map(_ data: Data, response: HTTPURLResponse) -> Result {
-        do {
-            let items = try FeedItemsMapper.map(data, response)
-            return .success(items)
-        } catch {
-            return .failure(.invalidData)
         }
     }
 }
