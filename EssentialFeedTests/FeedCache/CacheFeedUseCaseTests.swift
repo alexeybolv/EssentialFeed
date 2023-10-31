@@ -19,11 +19,10 @@ class LocalFeedLoader {
     
     func save(_ items: [FeedItem], completion: @escaping (Error?) -> Void) {
         store.deleteCachedFeed { [unowned self] error  in
-            completion(error)
             if error == nil {
-                self.store.insert(items, timestamp: self.currentDate(), completion: { _ in
-                    
-                })
+                self.store.insert(items, timestamp: self.currentDate(), completion: completion)
+            } else {
+                completion(error)
             }
         }
     }
@@ -123,24 +122,24 @@ final class CacheFeedUseCaseTests: XCTestCase {
         XCTAssertEqual(receivedError as NSError?, deletionError)
     }
     
-//    func test_save_failsOnInsertionError() {
-//        let (sut, store) = makeSUT()
-//        let items = [uniqueItem(), uniqueItem()]
-//        let insertionError = anyNSError()
-//        let exp = expectation(description: "Wait for save completion")
-//        
-//        var receivedError: Error?
-//        sut.save(items) { error in
-//            receivedError = error
-//            exp.fulfill()
-//        }
-//        
-//        store.completeDeletionSuccessfully()
-//        store.completeInsertion(with: insertionError)
-//        wait(for: [exp], timeout: 1.0)
-//        
-//        XCTAssertEqual(receivedError as NSError?, insertionError)
-//    }
+    func test_save_failsOnInsertionError() {
+        let (sut, store) = makeSUT()
+        let items = [uniqueItem(), uniqueItem()]
+        let insertionError = anyNSError()
+        let exp = expectation(description: "Wait for save completion")
+        
+        var receivedError: Error?
+        sut.save(items) { error in
+            receivedError = error
+            exp.fulfill()
+        }
+        
+        store.completeDeletionSuccessfully()
+        store.completeInsertion(with: insertionError)
+        wait(for: [exp], timeout: 1.0)
+        
+        XCTAssertEqual(receivedError as NSError?, insertionError)
+    }
     
     // MARK: - Helpers
     
