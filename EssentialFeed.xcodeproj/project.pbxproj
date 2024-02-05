@@ -42,6 +42,7 @@
 		72F1DEAB2B712FC900C1196B /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEAA2B712FC900C1196B /* CoreDataFeedStoreTests.swift */; };
 		72F1DEAD2B71333800C1196B /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */; };
 		72F1DEB22B71389C00C1196B /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEB02B71389C00C1196B /* FeedStore.xcdatamodeld */; };
+		72F1DEB52B715F5F00C1196B /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEB42B715F5F00C1196B /* CoreDataHelpers.swift */; };
 		72F904052AAA89EC007A3AFA /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F904042AAA89EC007A3AFA /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		72F1DEAA2B712FC900C1196B /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 		72F1DEB12B71389C00C1196B /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
+		72F1DEB42B715F5F00C1196B /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		72F904042AAA89EC007A3AFA /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +264,7 @@
 			children = (
 				72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */,
 				72F1DEB02B71389C00C1196B /* FeedStore.xcdatamodeld */,
+				72F1DEB42B715F5F00C1196B /* CoreDataHelpers.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				727531422B552D28008252F6 /* FeedStore.swift in Sources */,
 				721D0BEF2AD837830099EC65 /* URLSessionHTTPClient.swift in Sources */,
 				72F904052AAA89EC007A3AFA /* RemoteFeedLoader.swift in Sources */,
+				72F1DEB52B715F5F00C1196B /* CoreDataHelpers.swift in Sources */,
 				72CBA13E2AADC901003346E6 /* HTTPClient.swift in Sources */,
 				72F1DEAD2B71333800C1196B /* CoreDataFeedStore.swift in Sources */,
 				7238562E2A85B44A0041395F /* FeedLoader.swift in Sources */,
