@@ -41,6 +41,7 @@
 		72F1DEA92B6C0A6600C1196B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEA82B6C0A6600C1196B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
 		72F1DEAB2B712FC900C1196B /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEAA2B712FC900C1196B /* CoreDataFeedStoreTests.swift */; };
 		72F1DEAD2B71333800C1196B /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */; };
+		72F1DEB22B71389C00C1196B /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72F1DEB02B71389C00C1196B /* FeedStore.xcdatamodeld */; };
 		72F904052AAA89EC007A3AFA /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F904042AAA89EC007A3AFA /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		72F1DEA82B6C0A6600C1196B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		72F1DEAA2B712FC900C1196B /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
+		72F1DEB12B71389C00C1196B /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
 		72F904042AAA89EC007A3AFA /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,12 +221,12 @@
 		7275313E2B552B64008252F6 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
+				72F1DEAE2B71383200C1196B /* Infrastructure */,
 				727531412B552D28008252F6 /* FeedStore.swift */,
 				7275313F2B552B91008252F6 /* LocalFeedLoader.swift */,
 				727531452B55E523008252F6 /* LocalFeedImage.swift */,
 				72AD85E62B6003CE00037AFA /* FeedCachePolicy.swift */,
 				72F1DE9E2B69C20100C1196B /* CodableFeedStore.swift */,
-				72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -245,6 +247,23 @@
 				721D0BE92AD3D7EB0099EC65 /* URLSessionHTTPClientTests.swift */,
 			);
 			path = FeedAPI;
+			sourceTree = "<group>";
+		};
+		72F1DEAE2B71383200C1196B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				72F1DEAF2B71385800C1196B /* CoreData */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		72F1DEAF2B71385800C1196B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				72F1DEAC2B71333800C1196B /* CoreDataFeedStore.swift */,
+				72F1DEB02B71389C00C1196B /* FeedStore.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		72F904032AAA89D3007A3AFA /* Feed API */ = {
@@ -407,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				727531462B55E523008252F6 /* LocalFeedImage.swift in Sources */,
+				72F1DEB22B71389C00C1196B /* FeedStore.xcdatamodeld in Sources */,
 				727531442B55E4D4008252F6 /* RemoteFeedITem.swift in Sources */,
 				727531422B552D28008252F6 /* FeedStore.swift in Sources */,
 				721D0BEF2AD837830099EC65 /* URLSessionHTTPClient.swift in Sources */,
@@ -758,6 +778,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		72F1DEB02B71389C00C1196B /* FeedStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				72F1DEB12B71389C00C1196B /* FeedStore.xcdatamodel */,
+			);
+			currentVersion = 72F1DEB12B71389C00C1196B /* FeedStore.xcdatamodel */;
+			path = FeedStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 723856082A85A4F50041395F /* Project object */;
 }
