@@ -226,7 +226,6 @@
 				7275313F2B552B91008252F6 /* LocalFeedLoader.swift */,
 				727531452B55E523008252F6 /* LocalFeedImage.swift */,
 				72AD85E62B6003CE00037AFA /* FeedCachePolicy.swift */,
-				72F1DE9E2B69C20100C1196B /* CodableFeedStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -252,6 +251,7 @@
 		72F1DEAE2B71383200C1196B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				72F1DEB32B715F1E00C1196B /* Codable */,
 				72F1DEAF2B71385800C1196B /* CoreData */,
 			);
 			path = Infrastructure;
@@ -264,6 +264,14 @@
 				72F1DEB02B71389C00C1196B /* FeedStore.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		72F1DEB32B715F1E00C1196B /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				72F1DE9E2B69C20100C1196B /* CodableFeedStore.swift */,
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 		72F904032AAA89D3007A3AFA /* Feed API */ = {
