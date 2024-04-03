@@ -255,8 +255,8 @@
 		722E5AE12B9646F70060FC9F /* FeedUI */ = {
 			isa = PBXGroup;
 			children = (
-				727F4CE02BBD9B3400137083 /* Models */,
 				722E5AEB2BA9E11C0060FC9F /* Composers */,
+				727F4CE02BBD9B3400137083 /* Models */,
 				722E5AE22B9647060060FC9F /* Controllers */,
 				722E5AE32B9647170060FC9F /* Views */,
 			);
