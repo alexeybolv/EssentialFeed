@@ -41,6 +41,7 @@
 		727F4D062BCF254700137083 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 727F4D082BCF254700137083 /* Feed.strings */; };
 		727F4D0E2BCF2FDE00137083 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F4D0D2BCF2FDE00137083 /* FeedLocalizationTests.swift */; };
 		727F4D102BCFD26300137083 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F4D0F2BCFD26300137083 /* MainQueueDispatchDecorator.swift */; };
+		727F4D122BCFD2E600137083 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F4D112BCFD2E600137083 /* WeakRefVirtualProxy.swift */; };
 		72AD85DF2B59262D00037AFA /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85DE2B59262D00037AFA /* FeedStoreSpy.swift */; };
 		72AD85E12B5ABE8C00037AFA /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85E02B5ABE8C00037AFA /* ValidateFeedCacheUseCaseTests.swift */; };
 		72AD85E32B5AC50500037AFA /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85E22B5AC50500037AFA /* FeedCacheTestHelpers.swift */; };
@@ -169,6 +170,7 @@
 		727F4D0A2BCF2F1700137083 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		727F4D0D2BCF2FDE00137083 /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
 		727F4D0F2BCFD26300137083 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		727F4D112BCFD2E600137083 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		72AD85DE2B59262D00037AFA /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
 		72AD85E02B5ABE8C00037AFA /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		72AD85E22B5AC50500037AFA /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			children = (
 				722E5AEC2BA9E13C0060FC9F /* FeedUIComposer.swift */,
 				727F4D0F2BCFD26300137083 /* MainQueueDispatchDecorator.swift */,
+				727F4D112BCFD2E600137083 /* WeakRefVirtualProxy.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 			files = (
 				722E5AE62B96474D0060FC9F /* FeedImageDataLoader.swift in Sources */,
 				727F4D102BCFD26300137083 /* MainQueueDispatchDecorator.swift in Sources */,
+				727F4D122BCFD2E600137083 /* WeakRefVirtualProxy.swift in Sources */,
 				722E5AED2BA9E13C0060FC9F /* FeedUIComposer.swift in Sources */,
 				727F4CF62BC6E1DB00137083 /* FeedViewModel.swift in Sources */,
 				72D9EDD32B8DFEF000BF2305 /* FeedViewController.swift in Sources */,
