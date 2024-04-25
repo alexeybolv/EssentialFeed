@@ -25,6 +25,9 @@
                                     <state key="normal" title="Error label">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="hideMessageAnimated" destination="dRq-xQ-UKV" eventType="touchUpInside" id="5wh-OB-NuE"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,6 +38,9 @@
                                 <constraint firstItem="0Oj-nN-Kbe" firstAttribute="leading" secondItem="dRq-xQ-UKV" secondAttribute="leading" id="Lii-iJ-p0I"/>
                                 <constraint firstItem="0Oj-nN-Kbe" firstAttribute="top" secondItem="dRq-xQ-UKV" secondAttribute="top" id="b0W-9h-aFP"/>
                             </constraints>
+                            <connections>
+                                <outlet property="button" destination="0Oj-nN-Kbe" id="3yN-jk-oE0"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="pGT-Qn-vv2">
                             <rect key="frame" x="0.0" y="692" width="414" height="16"/>
