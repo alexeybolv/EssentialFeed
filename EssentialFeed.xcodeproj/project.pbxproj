@@ -14,7 +14,6 @@
 		721D0BF82AD8B3BE0099EC65 /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D0BF72AD8B3BE0099EC65 /* EssentialFeedAPIEndToEndTests.swift */; };
 		721D0BF92AD8B3BE0099EC65 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 723856112A85A4F50041395F /* EssentialFeed.framework */; };
 		721D0BFF2AD8D6080099EC65 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D0BEC2AD7CE7A0099EC65 /* XCTestCase+MemoryLeakTracking.swift */; };
-		722E5AE62B96474D0060FC9F /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E5AE52B96474D0060FC9F /* FeedImageDataLoader.swift */; };
 		722E5AEA2B98FDDB0060FC9F /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E5AE92B98FDDB0060FC9F /* FeedImageCellController.swift */; };
 		722E5AED2BA9E13C0060FC9F /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E5AEC2BA9E13C0060FC9F /* FeedUIComposer.swift */; };
 		72382F932AEB0F77005C9DC0 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72382F922AEB0F77005C9DC0 /* CacheFeedUseCaseTests.swift */; };
@@ -153,7 +152,6 @@
 		721D0BF52AD8B3BE0099EC65 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		721D0BF72AD8B3BE0099EC65 /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		721D0C002AD8DBFF0099EC65 /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_macOS.xctestplan; sourceTree = "<group>"; };
-		722E5AE52B96474D0060FC9F /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		722E5AE92B98FDDB0060FC9F /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		722E5AEC2BA9E13C0060FC9F /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		72382F922AEB0F77005C9DC0 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
@@ -332,14 +330,6 @@
 				727F4CFB2BC98F5100137083 /* Feed.xcassets */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		722E5AE42B96472E0060FC9F /* FeedImageLoader */ = {
-			isa = PBXGroup;
-			children = (
-				722E5AE52B96474D0060FC9F /* FeedImageDataLoader.swift */,
-			);
-			path = FeedImageLoader;
 			sourceTree = "<group>";
 		};
 		722E5AEB2BA9E11C0060FC9F /* Composers */ = {
@@ -527,7 +517,6 @@
 		72D9EDAE2B88C90000BF2305 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				722E5AE42B96472E0060FC9F /* FeedImageLoader */,
 				722E5AE12B9646F70060FC9F /* FeedUI */,
 				72D9EDB02B88C90000BF2305 /* EssentialFeediOS.docc */,
 			);
@@ -739,7 +728,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					721D0BF42AD8B3BE0099EC65 = {
 						CreatedOnToolsVersion = 15.0;
@@ -910,7 +899,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				722E5AE62B96474D0060FC9F /* FeedImageDataLoader.swift in Sources */,
 				727F4D102BCFD26300137083 /* MainQueueDispatchDecorator.swift in Sources */,
 				727F4D122BCFD2E600137083 /* WeakRefVirtualProxy.swift in Sources */,
 				722E5AED2BA9E13C0060FC9F /* FeedUIComposer.swift in Sources */,
@@ -1265,6 +1253,7 @@
 		72D9EDBF2B88C90000BF2305 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1300,6 +1289,7 @@
 		72D9EDC02B88C90000BF2305 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
