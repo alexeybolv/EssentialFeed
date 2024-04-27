@@ -1,5 +1,5 @@
 //
-//  RemoteFeedLoaderTests.swift
+//  LoadFeedFromRemoteUseCaseTests.swift
 //  EssentialFeedTests
 //
 //  Created by Alexey Bolvonovich on 11.08.23.
@@ -50,7 +50,7 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         samples.enumerated().forEach { index, code in
             expect(sut, toCompleteWithResult: failure(.invalidData)) {
                 let json = makeItemsJSON([])
-                client.complete(with: code, data: json, at: index)
+                client.complete(withStatusCode: code, data: json, at: index)
             }
         }
     }
@@ -60,7 +60,7 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         expect(sut, toCompleteWithResult: failure(.invalidData)) {
             let invalidData = Data("Data".utf8)
-            client.complete(with: 200, data: invalidData)
+            client.complete(withStatusCode: 200, data: invalidData)
         }
     }
     
@@ -69,7 +69,7 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         expect(sut, toCompleteWithResult: .success([])) {
             let emptyListJSON = makeItemsJSON([])
-            client.complete(with: 200, data: emptyListJSON)
+            client.complete(withStatusCode: 200, data: emptyListJSON)
         }
     }
     
@@ -84,7 +84,7 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         expect(sut, toCompleteWithResult: .success(items)) {
             let jsonData = makeItemsJSON([item1.json, item2.json])
-            client.complete(with: 200, data: jsonData)
+            client.complete(withStatusCode: 200, data: jsonData)
         }
     }
     
@@ -97,7 +97,7 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         sut?.load { capturedResults.append($0) }
         
         sut = nil
-        client.complete(with: 200, data: makeItemsJSON([]))
+        client.complete(withStatusCode: 200, data: makeItemsJSON([]))
         
         XCTAssertTrue(capturedResults.isEmpty)
     }
@@ -151,31 +151,5 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
         let json = ["items": items]
         return try! JSONSerialization.data(withJSONObject: json)
-    }
-    
-    private class HTTPClientSpy: HTTPClient {
-        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
-        
-        var requestedURLs: [URL] {
-            messages.map({ $0.url })
-        }
-        
-        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
-            messages.append((url, completion))
-        }
-        
-        func complete(with error: Error, at index: Int = 0) {
-            messages[index].completion(.failure(error))
-        }
-        
-        func complete(with statusCode: Int, data: Data, at index: Int = 0) {
-            let response = HTTPURLResponse(
-                url: requestedURLs[index],
-                statusCode: statusCode,
-                httpVersion: nil,
-                headerFields: nil
-            )!
-            messages[index].completion(.success((data, response)))
-        }
     }
 }

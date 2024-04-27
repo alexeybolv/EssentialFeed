@@ -1,11 +1,11 @@
 //
 //  FeedImageDataLoader.swift
-//  EssentialFeediOS
+//  EssentialFeed
 //
-//  Created by Alexey Bolvonovich on 04/03/2024.
+//  Created by Alexey Bolvonovich on 26/04/2024.
 //
 
-import EssentialFeed
+import Foundation
 
 public protocol FeedImageDataLoaderTask {
     func cancel()
