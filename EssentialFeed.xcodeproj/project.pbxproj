@@ -594,10 +594,10 @@
 			children = (
 				724891082BDDC09A009BE492 /* Helpers */,
 				72F904042AAA89EC007A3AFA /* RemoteFeedLoader.swift */,
-				72CBA13D2AADC901003346E6 /* HTTPClient.swift */,
 				727531432B55E4D4008252F6 /* RemoteFeedITem.swift */,
 				72CBA13F2AADC95C003346E6 /* FeedItemsMapper.swift */,
 				72A5B4BF2BDC332500253F0E /* RemoteFeedImageDataLoader.swift */,
+				72CBA13D2AADC901003346E6 /* HTTPClient.swift */,
 				721D0BEE2AD837830099EC65 /* URLSessionHTTPClient.swift */,
 			);
 			path = "Feed API";
