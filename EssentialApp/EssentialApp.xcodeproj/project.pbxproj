@@ -23,6 +23,7 @@
 		725A5D332BE453D500EC5964 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D322BE453D500EC5964 /* FeedLoaderWithFallbackComposite.swift */; };
 		725A5D352BE454C100EC5964 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D342BE454C100EC5964 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
 		725A5D372BEA9EA300EC5964 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D362BEA9EA300EC5964 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
+		725A5D3A2BEA9FE600EC5964 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D392BEA9FE600EC5964 /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		725A5D322BE453D500EC5964 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		725A5D342BE454C100EC5964 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		725A5D362BEA9EA300EC5964 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
+		725A5D392BEA9FE600EC5964 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		7248913F2BE02B7F009BE492 /* EssentialAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				725A5D382BEA9FCE00EC5964 /* Helpers */,
 				724891612BE03AF8009BE492 /* FeedLoaderWithFallbackCompositeTests.swift */,
 				725A5D342BE454C100EC5964 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
 			);
@@ -167,6 +170,14 @@
 				7248915A2BE02EE7009BE492 /* EssentialFeed.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		725A5D382BEA9FCE00EC5964 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				725A5D392BEA9FE600EC5964 /* SharedTestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 			files = (
 				725A5D352BE454C100EC5964 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				724891622BE03AF8009BE492 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
+				725A5D3A2BEA9FE600EC5964 /* SharedTestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
