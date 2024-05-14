@@ -26,6 +26,7 @@
 		725A5D3A2BEA9FE600EC5964 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D392BEA9FE600EC5964 /* SharedTestHelpers.swift */; };
 		725A5D3C2BEAA05E00EC5964 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D3B2BEAA05E00EC5964 /* XCTestCase+MemoryLeakTracking.swift */; };
 		725A5D4C2BF2CDFB00EC5964 /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D4B2BF2CDFB00EC5964 /* FeedLoaderCacheDecoratorTests.swift */; };
+		725A5D4E2BF2F18C00EC5964 /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5D4D2BF2F18C00EC5964 /* FeedLoaderStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		725A5D392BEA9FE600EC5964 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		725A5D3B2BEAA05E00EC5964 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		725A5D4B2BF2CDFB00EC5964 /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
+		725A5D4D2BF2F18C00EC5964 /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				725A5D392BEA9FE600EC5964 /* SharedTestHelpers.swift */,
 				725A5D3B2BEAA05E00EC5964 /* XCTestCase+MemoryLeakTracking.swift */,
+				725A5D4D2BF2F18C00EC5964 /* FeedLoaderStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				725A5D4C2BF2CDFB00EC5964 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				725A5D3C2BEAA05E00EC5964 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				724891622BE03AF8009BE492 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
+				725A5D4E2BF2F18C00EC5964 /* FeedLoaderStub.swift in Sources */,
 				725A5D3A2BEA9FE600EC5964 /* SharedTestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
