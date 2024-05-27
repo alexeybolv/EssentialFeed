@@ -52,6 +52,7 @@
 		7294D5052C00252C0000CD86 /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294D4FB2C00252B0000CD86 /* FeedLoaderPresentationAdapter.swift */; };
 		7294D5062C00252C0000CD86 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294D4FD2C00252B0000CD86 /* FeedImageDataLoaderPresentationAdapter.swift */; };
 		7294D50A2C00278A0000CD86 /* EssentialApp.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 7294D5092C00278A0000CD86 /* EssentialApp.xctestplan */; };
+		7294D50C2C00BFDA0000CD86 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294D50B2C00BFDA0000CD86 /* FeedAcceptanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		7294D4FF2C00252C0000CD86 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		7294D5002C00252C0000CD86 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		7294D5092C00278A0000CD86 /* EssentialApp.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EssentialApp.xctestplan; sourceTree = "<group>"; };
+		7294D50B2C00BFDA0000CD86 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				725A5D342BE454C100EC5964 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
 				7237B0842BF40B7E00663678 /* FeedImageDataLoaderCacheDecoratorTests.swift */,
 				7294D4F12C00231E0000CD86 /* FeedUIIntegrationTests.swift */,
+				7294D50B2C00BFDA0000CD86 /* FeedAcceptanceTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				7294D4DE2BFFB5BD0000CD86 /* SceneDelegateTests.swift in Sources */,
 				7294D4F82C0023480000CD86 /* FeedViewController+TestHelpers.swift in Sources */,
 				725A5D4C2BF2CDFB00EC5964 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
+				7294D50C2C00BFDA0000CD86 /* FeedAcceptanceTests.swift in Sources */,
 				7294D4FA2C0024420000CD86 /* FeedUIIntegrationTests+LoaderSpy.swift in Sources */,
 				7237B0872BF413C900663678 /* FeedImageDataLoaderSpy.swift in Sources */,
 				725A5D3C2BEAA05E00EC5964 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
