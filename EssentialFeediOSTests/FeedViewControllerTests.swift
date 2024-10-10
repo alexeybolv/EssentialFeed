@@ -313,7 +313,7 @@ final class FeedViewControllerTests: XCTestCase {
         var loadedImageURLs: [URL] {
             return imageRequests.map { $0.url }
         }
-        private (set) var cancelledImageURLs = [URL]()
+        private(set) var cancelledImageURLs = [URL]()
         
         func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> EssentialFeediOS.FeedImageDataLoaderTask {
             imageRequests.append((url, completion))
