@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-15
+    runs-on: macos-latest
     steps:
     
     - name: Checkout code
@@ -29,9 +29,9 @@ jobs:
     - name: Build and test (MacOS)
       run: |
         set -x
-        xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty --test
         
     - name: Build and test (iOS)
       run: |
         set -x
-        xcodebuild clean build test -workspace EssentialApp.xcworkspace -scheme "CI_iOS" -destination "platform=iOS Simulator,name=iPhone 16 Pro" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        xcodebuild clean build test -workspace EssentialApp.xcworkspace -scheme "CI_iOS" -destination "platform=iOS Simulator,name=iPhone 16 Pro" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty --test
