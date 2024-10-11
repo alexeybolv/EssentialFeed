@@ -162,17 +162,17 @@ struct SnapshotConfiguration {
             size: CGSize(width: 375, height: 667),
             safeAreaInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0),
             layoutMargins: UIEdgeInsets(top: 20, left: 16, bottom: 0, right: 16),
-            traitCollection: UITraitCollection(traitsFrom: [
-                .init(forceTouchCapability: .available),
-                .init(layoutDirection: .leftToRight),
-                .init(preferredContentSizeCategory: .medium),
-                .init(userInterfaceIdiom: .phone),
-                .init(horizontalSizeClass: .compact),
-                .init(verticalSizeClass: .regular),
-                .init(displayScale: 2),
-                .init(displayGamut: .P3),
-                .init(userInterfaceStyle: style)
-            ]))
+            traitCollection: UITraitCollection(mutations: { traits in
+                traits.forceTouchCapability = .available
+                traits.layoutDirection = .leftToRight
+                traits.preferredContentSizeCategory = .medium
+                traits.userInterfaceIdiom = .phone
+                traits.horizontalSizeClass = .compact
+                traits.verticalSizeClass = .regular
+                traits.displayScale = 2
+                traits.displayGamut = .P3
+                traits.userInterfaceStyle = style
+            }))
     }
 }
 
@@ -193,7 +193,29 @@ private final class SnapshotWindow: UIWindow {
     }
     
     override var traitCollection: UITraitCollection {
-        return UITraitCollection(traitsFrom: [super.traitCollection, configuration.traitCollection])
+        return UITraitCollection(mutations: { traits in
+            // Копируем свойства из super.traitCollection
+            traits.forceTouchCapability = super.traitCollection.forceTouchCapability
+            traits.layoutDirection = super.traitCollection.layoutDirection
+            traits.preferredContentSizeCategory = super.traitCollection.preferredContentSizeCategory
+            traits.userInterfaceIdiom = super.traitCollection.userInterfaceIdiom
+            traits.horizontalSizeClass = super.traitCollection.horizontalSizeClass
+            traits.verticalSizeClass = super.traitCollection.verticalSizeClass
+            traits.displayScale = super.traitCollection.displayScale
+            traits.displayGamut = super.traitCollection.displayGamut
+            traits.userInterfaceStyle = super.traitCollection.userInterfaceStyle
+
+            // Дополнительно добавляем свойства из configuration.traitCollection
+            traits.forceTouchCapability = configuration.traitCollection.forceTouchCapability
+            traits.layoutDirection = configuration.traitCollection.layoutDirection
+            traits.preferredContentSizeCategory = configuration.traitCollection.preferredContentSizeCategory
+            traits.userInterfaceIdiom = configuration.traitCollection.userInterfaceIdiom
+            traits.horizontalSizeClass = configuration.traitCollection.horizontalSizeClass
+            traits.verticalSizeClass = configuration.traitCollection.verticalSizeClass
+            traits.displayScale = configuration.traitCollection.displayScale
+            traits.displayGamut = configuration.traitCollection.displayGamut
+            traits.userInterfaceStyle = configuration.traitCollection.userInterfaceStyle
+        })
     }
     
     func snapshot() -> UIImage {
